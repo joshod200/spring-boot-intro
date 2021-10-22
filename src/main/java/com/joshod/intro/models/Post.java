@@ -3,13 +3,19 @@ package com.joshod.intro.models;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "posts")
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String image;
     private String title;
     private String body;
-    private String user;
-
+    private Date created_at;
+    
     public String getImage() {
         return image;
     }
@@ -17,8 +23,6 @@ public class Post {
     public void setImage(String image) {
         this.image = image;
     }
-
-    private Date created_at;
 
     public String getTitle() {
         return title;
@@ -36,19 +40,16 @@ public class Post {
         this.body = body;
     }
 
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
     public String date(){
         return new SimpleDateFormat("MMMM d, y").format(created_at);
     }
+    
+    public Post(){
+        
+    }
 
-    public Post(String image, String title, String body){
+    public Post(Long id, String image, String title, String body){
+        this.id = id;
         this.image = image;
         this.title = title;
         this.body = body;
