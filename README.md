@@ -1,5 +1,5 @@
 # Spring Boot Intro
-Bootstrapped a spring boot web application that renders local data using jsp and jstl.
+Bootstrapped a spring boot web application that renders data from h2 database using jsp and jstl.
 
 ## Built With
 * Java
@@ -9,6 +9,7 @@ Bootstrapped a spring boot web application that renders local data using jsp and
 * Tomcat Embed Jasper
 * JSTL
 * Spring Boot Dev Tools
+* H2 Database
 
 ## Setup
 
