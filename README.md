@@ -3,11 +3,12 @@ Bootstrapped a spring boot web application that renders local data using jsp and
 
 ## Built With
 * Java
+* Maven
 * Spring Boot
-* Spring Boot Web
-* Tomcat Jasper
+* Spring Boot Starter Web
+* Tomcat Embed Jasper
 * JSTL
-* Spring boot dev tools
+* Spring Boot Dev Tools
 
 ## Setup
 
