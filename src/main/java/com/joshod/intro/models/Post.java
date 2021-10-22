@@ -1,9 +1,24 @@
 package com.joshod.intro.models;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Post {
+    private String image;
     private String title;
     private String body;
     private String user;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    private Date created_at;
 
     public String getTitle() {
         return title;
@@ -29,9 +44,15 @@ public class Post {
         this.user = user;
     }
 
-    public Post(String title, String body){
+    public String date(){
+        return new SimpleDateFormat("MMMM d, y").format(created_at);
+    }
+
+    public Post(String image, String title, String body){
+        this.image = image;
         this.title = title;
         this.body = body;
+        this.created_at = Calendar.getInstance().getTime();
     }
 
 }
