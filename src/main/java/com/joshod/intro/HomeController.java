@@ -15,7 +15,7 @@ public class HomeController {
 		ArrayList<Post> posts = new ArrayList();
 		for (int i = 1; i < 7; i++) {
 			posts.add(new Post("Post " + i, "Something"));
-		};
+		}
 		model.addAttribute("posts", posts);
 		return "home";
 	}
