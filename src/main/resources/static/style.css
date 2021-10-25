@@ -1,5 +1,6 @@
 body{
     font-family: "Poppins";
+    overflow-x: hidden;
 }
 
 img{
@@ -10,4 +11,34 @@ img{
 ul{
     padding: 0;
     list-style: none;
+}
+
+#post-image{
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#opaque{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#post-content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+#post-content-wrapper h1{
+    font-weight: 600;
 }

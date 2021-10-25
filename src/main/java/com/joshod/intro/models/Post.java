@@ -14,7 +14,12 @@ public class Post {
     private String image;
     private String title;
     private String body;
-    private Date created_at;
+    @Column(name="created_at")
+    private Date createdAt;
+    
+    public Long getId(){
+        return id;
+    }
     
     public String getImage() {
         return image;
@@ -41,7 +46,11 @@ public class Post {
     }
 
     public String date(){
-        return new SimpleDateFormat("MMMM d, y").format(created_at);
+        return new SimpleDateFormat("MMMM d, y").format(createdAt);
+    }
+    
+    public String imageMax(){
+        return "max-" + image;
     }
     
     public Post(){
@@ -53,7 +62,6 @@ public class Post {
         this.image = image;
         this.title = title;
         this.body = body;
-        this.created_at = Calendar.getInstance().getTime();
     }
 
 }

@@ -15,11 +15,11 @@
             <ul class="row">
                   <c:forEach items="${posts}" var="post">
                      <li class="col-sm-4 mt-3">
-                        <img src="${post.image}"/>
+                        <img src="/${post.image}"/>
                         <h4 class="mt-2">${post.title}</h4>
                         <small class="text-muted">${post.date()}</small>
                         <p>${post.body}</p>
-                        <a href="#">Read More</a>
+                        <a href="/posts/${post.id.toString()}">Read More</a>
                      </li>
                 </c:forEach>
             </ul>
