@@ -35,3 +35,4 @@ build/
 
 ### DB ###
 .db/intro.mv.db
+.db/intro.trace.db
