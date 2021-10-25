@@ -18,7 +18,7 @@
                         <img src="/${post.image}"/>
                         <h4 class="mt-2">${post.title}</h4>
                         <small class="text-muted">${post.date()}</small>
-                        <p>${post.body}</p>
+                        <p>${post.summary}</p>
                         <a href="/posts/${post.id.toString()}">Read More</a>
                      </li>
                 </c:forEach>

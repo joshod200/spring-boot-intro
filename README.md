@@ -25,5 +25,6 @@ cd spring-boot-intro
 
 ### Start Server
 ```bash
+./mvnw clean flyway:migrate -Dflyway.configFiles=flyway.conf
 ./mvnw spring-boot:run
 ```

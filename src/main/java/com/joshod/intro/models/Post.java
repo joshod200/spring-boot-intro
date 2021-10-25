@@ -13,6 +13,7 @@ public class Post {
     private Long id;
     private String image;
     private String title;
+    private String summary;
     private String body;
     @Column(name="created_at")
     private Date createdAt;
@@ -53,14 +54,24 @@ public class Post {
         return "max-" + image;
     }
     
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+    
+    
     public Post(){
         
     }
 
-    public Post(Long id, String image, String title, String body){
+    public Post(Long id, String image, String title, String summary, String body){
         this.id = id;
         this.image = image;
         this.title = title;
+        this.summary = summary;
         this.body = body;
     }
 
