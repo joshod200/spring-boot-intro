@@ -1,6 +1,0 @@
-2021-10-25 12:08:37 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "POSTS" not found; SQL statement:
-select post0_.id as id1_0_0_, post0_.body as body2_0_0_, post0_.created_at as created_3_0_0_, post0_.image as image4_0_0_, post0_.summary as summary5_0_0_, post0_.title as title6_0_0_ from posts post0_ where post0_.id=? [42102-200]
-2021-10-25 12:08:39 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "POSTS" not found; SQL statement:
-select post0_.id as id1_0_, post0_.body as body2_0_, post0_.created_at as created_3_0_, post0_.image as image4_0_, post0_.summary as summary5_0_, post0_.title as title6_0_ from posts post0_ [42102-200]

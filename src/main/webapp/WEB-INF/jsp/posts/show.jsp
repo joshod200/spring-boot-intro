@@ -14,7 +14,7 @@
              <div id="post-content-wrapper">
                  <div class="text-center">                  
                     <h1>${post.title}</h1>
-                    <p>${post.date()}</p>
+                    <p>${post.date()} &middot; ${post.category.name}</p>
                  </div>
              </div>
          </div>
@@ -35,7 +35,7 @@
                           <c:forEach items="${posts}" var="post">
                             <li>
                                 <h4 class="mt-2">${post.title}</h4>
-                                <small class="text-muted">${post.date()}</small>
+                                <small class="text-muted">${post.date()} &middot; ${post.category.name}</small>
                                 <p>${post.summary}</p>
                                 <a href="/posts/${post.id.toString()}">Read More</a>
                             </li>

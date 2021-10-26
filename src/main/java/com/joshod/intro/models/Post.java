@@ -17,6 +17,9 @@ public class Post {
     private String body;
     @Column(name="created_at")
     private Date createdAt;
+
+    @ManyToOne
+    private Category category;
     
     public Long getId(){
         return id;
@@ -62,17 +65,22 @@ public class Post {
         this.summary = summary;
     }
     
+    public Category getCategory()   {  
+        return category;  
+    }  
+    
     
     public Post(){
         
     }
 
-    public Post(Long id, String image, String title, String summary, String body){
+    public Post(Long id, String image, String title, String summary, String body, Category category){
         this.id = id;
         this.image = image;
         this.title = title;
         this.summary = summary;
         this.body = body;
+        this.category = category;
     }
 
 }
